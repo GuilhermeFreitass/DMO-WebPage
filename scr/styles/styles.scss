@@ -59,12 +59,12 @@ main {
     }
 
     .section-2 {
-        padding: 5px 5px 0 60px;
+        padding: 0px;
         display: grid;
-        grid-template-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 0.5fr;
 
         .content {
-            padding-top: 50px;
+            padding: 50px 0px 0px 100px;
 
             h1,
             p {
@@ -81,14 +81,14 @@ main {
                 font-size: 1.25rem;
                 font-weight: 500;
                 line-height: 28px;
+                max-width: 600px;
             }
         }
 
         picture {
             width: 100%;
             height: 100%;
-            position: relative;
-            top: 70px;
+            
 
             img {
                 width: 100%;
