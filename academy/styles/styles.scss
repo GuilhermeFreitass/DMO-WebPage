@@ -1,37 +1,3 @@
-body {
-    margin: 0;
-    top: 0;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    nav {
-        width: 100%;
-        padding: 20px 0;
-        background-color: #1F628E;
-        
-        ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-
-            li {
-                a {
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #fff;
-
-                }
-            }
-        }
-    }
-}
-
 main {
     .section-1 {
         width: 100%;
