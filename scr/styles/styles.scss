@@ -10,9 +10,11 @@ main {
             }
         }
     }
+}
 
+.section-home {
     .section-2 {
-        padding: 0px;
+        padding: 200px 0 0;
         display: grid;
         grid-template-columns: 1fr 0.5fr;
 
@@ -35,7 +37,7 @@ main {
         picture {
             // width: 100%;
             // height: 100%;
-            
+
 
             img {
                 // width: 100%;
@@ -45,3 +47,294 @@ main {
     }
 }
 
+.section-empresa {
+    .section-1 {
+        width: 100%;
+    }
+
+    .description {
+        color: #1F628E;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    .section-2 {
+        display: flex;
+        align-items: flex-end;
+        background-image: url('../image/pexels-divinetechygirl-1181715.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+
+        .layer {
+            background-color: #1f628e8f;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .content {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            padding: 40px 60px;
+
+            h1 {
+                margin-bottom: 24px;
+                color: #fff;
+            }
+
+            p {
+                max-width: 500px;
+                margin: 0;
+                color: #fff;
+            }
+        }
+    }
+
+    .section-3 {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+
+        div.card {
+            min-width: 300px;
+            min-height: 550px;
+            flex-basis: 0;
+            flex-grow: 1;
+            background-color: #1F628E;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+
+            li,
+            p {
+                font-weight: normal;
+                line-height: 35px;
+            }
+
+            ul {
+                li {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content {
+            color: #1F628E;
+            margin: 20px 70px;
+
+            p {
+                margin: 0 0 24px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+        }
+
+        picture {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 21px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+.section-academy {
+    .title {
+        display: flex;
+        justify-content: center;
+        color: #1F628E;
+
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-basis: 0;
+        flex-grow: 1;
+        border-radius: 10px;
+        gap: 50px;
+        margin-bottom: 120px;
+
+        .layer {
+            background-color: #1f628e8f;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            border-radius: 10px;
+
+        }
+
+        .card {
+            color: #fff;
+            border-radius: 10px;
+            min-width: 300px;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-basis: 0;
+            flex-grow: 1;
+            text-decoration: none;
+            cursor: pointer;
+
+
+
+
+            &.evento {
+                background-image: url('../../scr/image/istockphoto-499517325-612x612.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+
+                h2,
+                p {
+                    z-index: 2;
+                    margin: 25px;
+                    max-width: 500px;
+
+
+
+
+                }
+
+
+
+            }
+
+            &.treinamento {
+                background-image: url('../../scr/image/048-imagem-post-apresentacoes-acessiveis.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+
+                h2,
+                p {
+                    z-index: 2;
+                    margin: 25px;
+                    max-width: 500px;
+                }
+
+
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+}
+
+.section-produtos{
+
+    .title{
+        display: flex;
+        justify-content: center;
+        color: #1F628E;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-basis: 0;
+        flex-grow: 1;
+        border-radius: 10px;
+        gap: 50px;
+        margin-bottom: 120px;
+        position: relative;
+
+        .layer {
+            background-color: #1f628e8f;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            border-radius: 10px;
+
+        }
+
+        .card {
+            color: #fff;
+            border-radius: 10px;
+            min-width: 300px;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            flex-basis: 0;
+            flex-grow: 1;
+            text-decoration: none;
+            cursor: pointer;
+
+
+            &.orto {
+                background-image: url('../../scr/image/ortopedista.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+
+                h2 {
+                    z-index: 2;
+                    margin: 20px;
+                }
+            }
+
+            &.neuro {
+                background-image: url('../../scr/image/ortopedista.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+
+                h2 {
+                    z-index: 2;
+                }
+            }
+
+            &.mcmr {
+                background-image: url('../../scr/image/ortopedista.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+
+                h2 {
+                    z-index: 2;
+                }
+            }
+
+        }
+
+    }
+}

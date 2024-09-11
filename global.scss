@@ -1,13 +1,35 @@
-header {
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.header {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #1F628E;
+    top: 0;
+    
+    
+    &.fixed .picture{
+    display: none;
+    }
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
 
     .picture {
         padding-top: 30px;
-        img  {
+
+        img {
             width: 130px;
         }
     }
@@ -67,7 +89,7 @@ p {
 
 
 
-footer{
+footer {
     background-color: #1F628E;
     display: flex;
     justify-content: space-between;
