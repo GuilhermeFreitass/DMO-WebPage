@@ -11,6 +11,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./scr/styles/styles.css">
+
+    <script></script>
+    
 </head>
 
 <body>
@@ -40,31 +43,31 @@
 
         </section>
         <section class="section-home">
-        <section class="section-2">
-            <div class="content container">
-                <h1 id="home">INSTITUCIONAL</h1>
-                <p>
-                    A DMO é uma distribuidora de materiais ortopédicos que
-                    atua desde 1992 em diversas áreas do mercado de materiais
-                    médicos de primeira linha.
-                </p>
-                <p>
-                    Inovadora e comprometida com a qualidade, a empresa se
-                    preocupa em sempre oferecer o que há de mais moderno no
-                    setor de saúde, preservando a segurança e eficácia em seus
-                    produtos médicos, além de manter atendimento diferenciado.
-                    Navegue no nosso site e conheça-nos melhor.
-                </p>
-            </div>
-            <picture>
-                <source
-                    srcset="./scr/image/transparent-doctors-day-elderly-male-doctor-with-stethoscope-and-1710867876642-removebg-preview.png"
-                    alt="Encontre novas vagas de emprego">
-                <img
-                    src="./scr/image/transparent-doctors-day-elderly-male-doctor-with-stethoscope-and-1710867876642-removebg-preview.png" />
-            </picture>
+            <section class="section-2">
+                <div class="content container">
+                    <h1 id="home">INSTITUCIONAL</h1>
+                    <p>
+                        A DMO é uma distribuidora de materiais ortopédicos que
+                        atua desde 1992 em diversas áreas do mercado de materiais
+                        médicos de primeira linha.
+                    </p>
+                    <p>
+                        Inovadora e comprometida com a qualidade, a empresa se
+                        preocupa em sempre oferecer o que há de mais moderno no
+                        setor de saúde, preservando a segurança e eficácia em seus
+                        produtos médicos, além de manter atendimento diferenciado.
+                        Navegue no nosso site e conheça-nos melhor.
+                    </p>
+                </div>
+                <picture>
+                    <source
+                        srcset="./scr/image/transparent-doctors-day-elderly-male-doctor-with-stethoscope-and-1710867876642-removebg-preview.png"
+                        alt="Encontre novas vagas de emprego">
+                    <img
+                        src="./scr/image/transparent-doctors-day-elderly-male-doctor-with-stethoscope-and-1710867876642-removebg-preview.png" />
+                </picture>
+            </section>
         </section>
-    </section>
         <!-- Segunda Pagina PDF -->
         <section class="section-empresa">
             <section class="description container">
@@ -205,7 +208,7 @@
                     <p>
                         Por trabalhar com produtos altamente especializados, a DMO mantém e
                         protege o capital intelectual, incentivando o pensamento positivo e
-                        <span id="academy">inovador.</span>
+                        inovador.
                     </p>
                 </div>
                 <picture>
@@ -220,7 +223,7 @@
         <section class="section-academy">
 
             <div class="title container">
-                <h1>DMO ACADEMY</h1>
+                <h1 id="academy">DMO ACADEMY</h1>
             </div>
             <section class="cards container">
                 <a href="#" class="evento card">
@@ -240,7 +243,6 @@
                     <p>Aqui dentro vai conter uma pequena
                         descrição do que são esses
                         treinamentos e como eles funcionam.</p>
-                    <span id="produtos" style="visibility: hidden;"></span>
 
                 </a>
             </section>
@@ -249,24 +251,24 @@
         <!-- Quarta pagina do PDF -->
         <section class="section-produtos">
             <div class="title container">
-            
-            <h1>PRODUTOS</h1>
+
+                <h1 id="produtos">PRODUTOS</h1>
             </div>
             <section class="cards container">
-                <a href="./ortopedia.html" class="orto card">
+                <a href="./produtos/ortopedia/ortopedia.html" class="orto card">
                     <div class="layer"></div>
 
                     <h2>Ortopedia</h2>
 
                 </a>
-                <a href="#" class="neuro card">
+                <a href="./produtos/coluna_neuro/coluna_neuro.html" class="neuro card">
                     <div class="layer"></div>
 
                     <h2>Coluna e Neuro</h2>
 
                 </a>
 
-                <a href="#" class="mcmr card">
+                <a href="./produtos/mc_mr/mc_mr.html" class="mcmr card">
                     <div class="layer"></div>
 
                     <h2>Medicina Conservadora e Medicina Regenerativa</h2>
@@ -277,8 +279,8 @@
     </main>
     <footer>
         <ul>
-            <li><a href="./empresa/">A empresa</a></li>
-            <li><a href="./academy/">DMO Academy</a></li>
+            <li><a href="#empresa">A empresa</a></li>
+            <li><a href="#academy">DMO Academy</a></li>
             <li><a href="#">Trabalhe Conosco</a></li>
             <li><a href="#">Política de Privacidadee Proteção de Dados</a></li>
         </ul>
@@ -308,16 +310,50 @@
     </footer>
 </body>
 <script>
-    window.onscroll = function() {
-      var menu = document.querySelector('.header');
-      var logoHeight = document.querySelector('.picture').offsetHeight;
-      
-      if (window.pageYOffset > logoHeight) {
-        menu.classList.add('fixed');
-      } else {
-        menu.classList.remove('fixed');
-      }
+   
+    function setupScrollListener(selector, offset) {
+        const link = document.querySelector(`a[href="${selector}"]`);
+
+        if (!link) {
+            console.error(`Link com o seletor "${selector}" não encontrado.`);
+            return;
+        }
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = document.querySelector(selector);
+
+            if (!target) {
+                console.error(`Elemento com o id "${selector}" não encontrado.`);
+                return;
+            }
+                        
+
+            window.scrollTo({
+                top: target.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        setupScrollListener('#home', 160);
+        setupScrollListener('#empresa', 100);
+        setupScrollListener('#academy', 110);
+        setupScrollListener('#produtos', 110);
+    });
+
+
+
+    window.onscroll = function () {
+        var menu = document.querySelector('.header');
+        var logoHeight = document.querySelector('.picture').offsetHeight;
+
+        if (window.pageYOffset > logoHeight) {
+            menu.classList.add('fixed');
+        } else {
+            menu.classList.remove('fixed');
+        }
     };
-  </script>
+</script>
 
 </html>
