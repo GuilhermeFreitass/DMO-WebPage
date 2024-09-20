@@ -1,6 +1,6 @@
 main {
     .section-1 {
-        width: 100%;
+        // width: 100%;
 
         picture {
             img {
@@ -14,7 +14,7 @@ main {
 
 .section-home {
     .section-2 {
-        padding: 200px 0 0;
+        padding: 0 0;
         display: grid;
         grid-template-columns: 1fr 0.5fr;
 
@@ -35,13 +35,14 @@ main {
         }
 
         picture {
-            // width: 100%;
-            // height: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
 
+            justify-content: center;
 
             img {
-                // width: 100%;
-                // height: 100%;
+                width: 80%;
             }
         }
     }
@@ -209,7 +210,7 @@ main {
 
 
             &.evento {
-                background-image: url('../../scr/image/istockphoto-499517325-612x612.jpg');
+                background-image: url('../../src/image/istockphoto-499517325-612x612.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 position: relative;
@@ -230,7 +231,7 @@ main {
             }
 
             &.treinamento {
-                background-image: url('../../scr/image/048-imagem-post-apresentacoes-acessiveis.png');
+                background-image: url('../../src/image/048-imagem-post-apresentacoes-acessiveis.png');
                 background-size: cover;
                 background-repeat: no-repeat;
                 position: relative;
@@ -256,9 +257,9 @@ main {
 
 }
 
-.section-produtos{
+.section-produtos {
 
-    .title{
+    .title {
         display: flex;
         justify-content: center;
         color: #1F628E;
@@ -301,7 +302,7 @@ main {
 
 
             &.orto {
-                background-image: url('../../scr/image/ortopedista.png');
+                background-image: url('../../src/image/ortopedista.png');
                 background-size: cover;
                 background-repeat: no-repeat;
                 position: relative;
@@ -313,7 +314,7 @@ main {
             }
 
             &.neuro {
-                background-image: url('../../scr/image/ortopedista.png');
+                background-image: url('../../src/image/ortopedista.png');
                 background-size: cover;
                 background-repeat: no-repeat;
                 position: relative;
@@ -324,7 +325,7 @@ main {
             }
 
             &.mcmr {
-                background-image: url('../../scr/image/ortopedista.png');
+                background-image: url('../../src/image/ortopedista.png');
                 background-size: cover;
                 background-repeat: no-repeat;
                 position: relative;
@@ -336,5 +337,60 @@ main {
 
         }
 
+    }
+}
+
+@media (max-width: 999px) {
+
+    .card.card.card.card{
+        width: 100%;
+        flex-basis: auto;
+}
+    .section-home {
+        max-width: 100%;
+
+
+        .section-2 {
+            display: flex;
+            flex-direction: column;
+
+           picture{
+            width: 90%;
+           }
+
+        }
+    }
+
+    .section-empresa {
+
+        max-width: 100%;
+
+        .section-3 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-4 {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .section-academy {
+        .cards {
+            display: flex;
+            flex-direction: column;
+
+        }
+        
+    }
+
+    .section-produtos {
+        .cards {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        
     }
 }
