@@ -17,19 +17,18 @@
 <body>
     <header class="header-desktop">
         <div class="picture">
-                <img src="./src/image/logo-dmo.png" alt="Encontre novas vagas de emprego" />
+            <img src="./src/image/logo-dmo.png" alt="Encontre novas vagas de emprego" />
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#empresa">A EMPRESA</a></li>
-                <li><a href="#academy">DMO ACADEMY</a></li>
-                <li><a href="#produtos">PRODUTOS</a></li>
-            </ul>
-        </nav>
-
     </header>
+    <nav class="nav-fixed">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#empresa">A EMPRESA</a></li>
+            <li><a href="#academy">DMO ACADEMY</a></li>
+            <li><a href="#produtos">PRODUTOS</a></li>
+        </ul>
+    </nav>
+
     <header class="header-mobile">
         <nav>
             <img class="imgLogo" src="./src/image/logo-dmo.png" alt="Encontre novas vagas de emprego" />
@@ -329,30 +328,31 @@
     <script src="mobile-navbar.js"></script>
 </body>
 <script>
-
     function setupScrollListener(selector, offset) {
-        const link = document.querySelector(`a[href="${selector}"]`);
+        const links = document.querySelectorAll(`a[href="${selector}"]`);
 
-        if (!link) {
+        if (!links) {
             console.error(`Link com o seletor "${selector}" não encontrado.`);
             return;
         }
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const target = document.querySelector(selector);
 
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const target = document.querySelector(selector);
-
-            if (!target) {
-                console.error(`Elemento com o id "${selector}" não encontrado.`);
-                return;
-            }
+                if (!target) {
+                    console.error(`Elemento com o id "${selector}" não encontrado.`);
+                    return;
+                }
 
 
-            window.scrollTo({
-                top: target.offsetTop - offset,
-                behavior: 'smooth'
+                window.scrollTo({
+                    top: target.offsetTop - offset,
+                    behavior: 'smooth'
+                });
             });
-        });
+        })
+
     }
     document.addEventListener('DOMContentLoaded', function () {
         setupScrollListener('#home', 160);
@@ -363,16 +363,16 @@
 
 
 
-    window.onscroll = function () {
-        var menu = document.querySelector('.header-desktop');
-        var logoHeight = document.querySelector('.picture').offsetHeight;
+    // window.onscroll = function () {
+    //     var menu = document.querySelector('.header-desktop');
+    //     var logoHeight = document.querySelector('.picture').offsetHeight;
 
-        if (window.pageYOffset > logoHeight) {
-            menu.classList.add('fixed');
-        } else {
-            menu.classList.remove('fixed');
-        }
-    };
+    //     if (window.pageYOffset > logoHeight) {
+    //         menu.classList.add('fixed');
+    //     } else {
+    //         menu.classList.remove('fixed');
+    //     }
+    // };
 </script>
 
 </html>
