@@ -220,7 +220,7 @@ footer {
             list-style: none;
             display: flex;
             position: absolute;
-            top: 61px;
+            top: 90px;
             margin-top: 0px;
             right: 0;
             width: 100vw;
@@ -238,14 +238,19 @@ footer {
 
             ul {
                 padding: 100px 0;
+                
             }
 
             li {
                 margin-left: 32px;
+                border-bottom: 5px solid #fff; /* Cria uma linha abaixo de cada li */
+                padding-bottom: 5px; /* Adiciona espaço entre o texto e a linha */
+                
+                
             }
 
             a{
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
         }
 
