@@ -17,7 +17,7 @@
 <body>
     <header class="header-desktop">
         <div class="picture">
-            <img src="./src/image/logo-dmo.png" alt="Encontre novas vagas de emprego" />
+            <img src="./src/image/logo-dmo.png" alt="img-dmo" />
         </div>
     </header>
     <nav class="nav-fixed">
@@ -31,7 +31,7 @@
 
     <header class="header-mobile">
         <nav>
-            <img class="imgLogo" src="./src/image/logo-dmo.png" alt="Encontre novas vagas de emprego" />
+            <img class="imgLogo" src="./src/image/logo-dmo.png" alt="img-dmo" />
 
             <div class="lines">
                 <div class="line1"></div>
@@ -51,16 +51,16 @@
 
 
     <main>
-        <section class="section-1">
-            <picture>
-                <source srcset="" alt="Video-DMO">
-                <img src="" alt="Video-DMO">
-            </picture>
-        </section>
 
         <section class="section-home">
             <section class="section-2">
+                <div class="video-dmo">
+                    <video controls autoplay muted loop id="video-dmo" src="./src/image/video-dmo.MP4" type="video/mp4">
+                       
+                    </video>
+                </div>
                 <div class="content container">
+
                     <h1 id="home">INSTITUCIONAL</h1>
                     <p>
                         A DMO é uma distribuidora de materiais ortopédicos que
@@ -75,13 +75,7 @@
                         Navegue no nosso site e conheça-nos melhor.
                     </p>
                 </div>
-                <picture>
-                    <source
-                        srcset="./src/image/transparent-doctors-day-elderly-male-doctor-with-stethoscope-and-1710867876642-removebg-preview.png"
-                        alt="Encontre novas vagas de emprego">
-                    <img
-                        src="./src/image/transparent-doctors-day-elderly-male-doctor-with-stethoscope-and-1710867876642-removebg-preview.png" />
-                </picture>
+
             </section>
         </section>
 
@@ -228,11 +222,6 @@
                         inovador.
                     </p>
                 </div>
-                <picture>
-                    <source srcset="./scr/image/—Pngtree—indian female doctor_14479571.png"
-                        alt="Encontre novas vagas de emprego">
-                    <img src="./src/image/—Pngtree—indian female doctor_14479571.png" />
-                </picture>
             </section>
         </section>
         <!-- Terceira pagina PDF -->
@@ -360,7 +349,6 @@
         setupScrollListener('#academy', 110);
         setupScrollListener('#produtos', 110);
     });
-
 
 
     // window.onscroll = function () {

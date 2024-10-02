@@ -15,10 +15,13 @@ main {
 .section-home {
     .section-2 {
         padding: 0 0;
-        display: grid;
-        grid-template-columns: 1fr 0.5fr;
+
+        video {
+            width: 100%;
+        }
 
         .content {
+
 
             h1,
             p {
@@ -28,23 +31,9 @@ main {
             h1 {
                 text-transform: uppercase;
             }
-
-            p {
-                max-width: 600px;
-            }
         }
 
-        picture {
-            height: 100%;
-            display: flex;
-            align-items: center;
 
-            justify-content: center;
-
-            img {
-                width: 80%;
-            }
-        }
     }
 }
 
@@ -347,24 +336,32 @@ main {
 
 @media (max-width: 999px) {
 
- 
 
-    .card.card.card.card{
+
+    .card.card.card.card {
         width: 100%;
         flex-basis: auto;
-}
+    }
+
     .section-home {
         max-width: 100%;
 
+        .video-dmo{
+            position: relative;
+            top: 10vh;
+        }
+
+        
 
         .section-2 {
             display: flex;
             flex-direction: column;
 
-           picture{
-            width: 90%;
-           }
+        }
 
+        .content{
+            position: relative;
+            top: 5vh;
         }
     }
 
@@ -381,12 +378,12 @@ main {
             display: flex;
             flex-direction: column;
 
-            .content{
+            .content {
                 margin: 40px 30px;
             }
         }
 
-        
+
     }
 
     .section-academy {
@@ -395,15 +392,15 @@ main {
             flex-direction: column;
 
         }
-        
+
     }
 
     .section-produtos {
         .cards {
             display: flex;
             flex-direction: column;
-            
+
         }
-        
+
     }
 }
