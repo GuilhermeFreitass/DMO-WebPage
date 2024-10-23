@@ -6,7 +6,7 @@
     color: #6DA9CD;
 }
 
-.description{
+.description {
     color: #1E2756;
 }
 
@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 75px;
+    gap: 100px;
 
 
 
@@ -40,6 +40,8 @@
         border-radius: 20px;
         position: relative;
         color: #FFF;
+
+
 
 
         .title_card {
@@ -54,5 +56,16 @@
             }
         }
 
+    }
+
+    .quadril {
+        background-image: url("../../src/image/artro-quadril.JPG");
+    }
+
+    .joelho {
+        background-image: url("../../src/image/artro-joelho.JPG");
+    }
+    .navegacao{
+        background-image: url("../../src/image/navegacao.JPG");
     }
 }
