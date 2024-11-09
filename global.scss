@@ -127,21 +127,81 @@ p {
 
 
 footer {
-    background-color: #1F628E;
+    background-color: #fff;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 40px 30px;
+    font-size: 1.75rem;
+    font-weight: bold;
+
+    .logos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo{
+            img{
+            width: 200px;
+            height: auto;
+            margin-bottom: 40px;
+            }
+        }
+        .icon{
+            gap: 50px;
+
+            img{
+                padding: 5px 10px;
+            }
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    .footer-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .footer-address {
+        display: flex;
+        max-width: 600px;
+    }
+    
+    .footer-address li {
+        display: flex;
+        align-items: center; /* Alinha o ícone com o texto */
+    }
+    
+    .icon-pin {
+        margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    }
+    
+    
+
+    
+    
 
     ul {
         list-style: none;
-        max-width: 200px;
+        max-width: 400px;
         padding: 0;
         margin: 0;
 
         li,
         a {
             font-weight: bold;
-            color: #fff;
+            color: #1F628E;
 
             &:last-child {
                 margin: 0;
@@ -163,7 +223,7 @@ footer {
 
 
 
-@media(max-width: 999px) {
+@media(max-width: 768px) {
 
     .header-desktop {
         display: none;
