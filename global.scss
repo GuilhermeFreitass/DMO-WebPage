@@ -122,6 +122,10 @@ p {
     font-weight: 500;
     line-height: 28px;
 }
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 
@@ -228,7 +232,7 @@ footer {
 
 
 
-@media(max-width: 768px) {
+@media(max-width: 999px) {
 
     .header-desktop {
         display: none;
@@ -396,13 +400,14 @@ footer {
         }
 
         .icon-pin{
+            display: none;
             img{
                 width: 70px;
                 height: auto;
             }
         }
 
-        
+    
 
         ul {
             margin-bottom: 30px;
