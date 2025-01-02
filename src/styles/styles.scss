@@ -75,6 +75,7 @@ main {
             h1 {
                 margin-bottom: 24px;
                 color: #fff;
+                text-align: left;
             }
 
             p {
@@ -306,9 +307,9 @@ main {
             }
 
             &.neuro {
-                background-image: url('../../src/image/ortopedista.png');
+                background-image: url('../../src/image/coluna-neuro.PNG');
                 background-position: center;
-                background-size: cover;
+                background-size: 100% 100%;
                 background-repeat: no-repeat;
                 position: relative;
 

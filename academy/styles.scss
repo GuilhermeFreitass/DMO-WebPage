@@ -1,0 +1,132 @@
+.header-produto {
+    background-color: #6DA9CD;
+}
+
+.content_prod {
+    color: #6DA9CD;
+}
+
+.description {
+    color: #1E2756;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 60%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+.cards_orto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+
+
+
+    .card_orto {
+        min-width: 300px;
+        min-height: 300px;
+        background-image: url('https://picsum.photos/id/239/600/600');
+        background-size: cover;
+        border-radius: 20px;
+        position: relative;
+        color: #FFF;
+
+
+
+
+        .title_card {
+            background-color: #6DA9CD;
+            position: absolute;
+            left: -20px;
+            bottom: -30px;
+            width: 90%;
+            border-radius: 10px;
+
+            p {
+                padding: 16px;
+            }
+        }
+
+    }
+
+  
+    .um{
+        background-image: url("./images/um.JPEG");
+    }
+    .dois{
+        background-image: url("./images/dois.JPEG");
+    }
+    .tres{
+        background-image: url("./images/tres.JPEG");
+    }
+    .quatro{
+        background-image: url("./images/quatro.JPEG");
+    }
+    .cinco{
+        background-image: url("./images/cinco.jpg");
+    }
+    .seis{
+        background-image: url("./images/seis.jpg");
+    }
+    .sete{
+        background-image: url("./images/sete.jpg");
+    }
+    .oito{
+        background-image: url("./images/oito.JPEG");
+    }
+    .nove{
+        background-image: url("./images/nove.JPEG");
+    }
+    .dez{
+        background-image: url("./images/dez.JPEG");
+    }
+    .onze{
+        background-image: url("./images/onze.JPEG");
+    }
+    .doze{
+        background-image: url("./images/doze.JPEG");
+    }
+    .treze{
+        background-image: url("./images/treze.JPEG");
+    }
+    .quatorze{
+        background-image: url("./images/quatorze.JPEG");
+    }
+    .quinze{
+        background-image: url("./images/quinze.JPEG");
+    }
+    .dezesseis{
+        background-image: url("./images/dezesseis.JPEG");
+    }
+    .dezessete{
+        background-image: url("./images/dezessete.JPEG");
+    }
+    .dezoito{
+        background-image: url("./images/dezoito.JPEG");
+    }
+    .dezenove{
+        background-image: url("./images/dezenove.JPEG");
+    }
+    .vinte{
+        background-image: url("./images/vinte.JPEG");
+    }
+    .vinte_um{
+        background-image: url("./images/vinte_um.JPEG");
+    }
+    .vinte_dois{
+        background-image: url("./images/vinte_dois.JPEG");
+    }
+
+
+
+}
