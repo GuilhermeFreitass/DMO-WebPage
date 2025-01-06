@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./src/styles/styles.css">
-
+    <link rel="stylesheet" href="./src/styles/popup.css">
 </head>
 
 <body>
@@ -47,8 +47,6 @@
         </nav>
 
     </header>
-
-
 
     <main>
 
@@ -275,7 +273,7 @@
                 <ul>
                     <li><a href="#empresa">A empresa</a></li>
                     <li><a href="./src/PDF/dmo-codigo-etica.pdf" target="_blank">Código de Ética</a></li>
-                    <li><a href="./src/PDF/">Canal de Denúncias</a></li>
+                    <li><a href="#" onclick="showDenunciasPopup(); return false;">Canal de Denúncias</a></li>
                 </ul>
                 <ul class="footer-address">
                     <li>
@@ -290,7 +288,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="./src/PDF/dmo-manual-politica.pdf" target="_blank">Política de Integridade</a></li>
+                    <li><a href="./politica.html" target="_blank">Política de Integridade</a></li>
                     <li><a href="./src/PDF/dmo-manual-politica.pdf" target="_blank">Prevenção à Corrupção e Relação com o Mercado</a></li>
                 </ul>
             </div>
@@ -298,6 +296,7 @@
     </footer>
 
     <script src="mobile-navbar.js"></script>
+    <script src="./src/js/popup.js"></script>
 </body>
 <script>
     function setupScrollListener(selector, offset) {
